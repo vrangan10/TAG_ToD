@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Agrian API</fullName>
+        <default>false</default>
+        <label>Agrian API</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agrian Label Indexing</fullName>
+        <default>false</default>
+        <label>Agrian Label Indexing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agrian Platform</fullName>
+        <default>false</default>
+        <label>Agrian Platform</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agronomy Services</fullName>
+        <default>false</default>
+        <label>Agronomy Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bakers Dozen</fullName>
+        <default>false</default>
+        <label>Bakers Dozen</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Croptivity</fullName>
+        <default>false</default>
+        <label>Croptivity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cultivator Suite</fullName>
+        <default>false</default>
+        <label>Cultivator Suite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Science</fullName>
+        <default>false</default>
+        <label>Data Science</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Datum</fullName>
+        <default>false</default>
+        <label>Datum</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demand Creation</fullName>
+        <default>false</default>
+        <label>Demand Creation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ERP</fullName>
+        <default>false</default>
+        <label>ERP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EZTrak</fullName>
+        <default>false</default>
+        <label>EZTrak</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Farm At Hand</fullName>
+        <default>false</default>
+        <label>Farm At Hand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>G2 Analytics</fullName>
+        <default>false</default>
+        <label>G2 Analytics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GL Grower Management</fullName>
+        <default>false</default>
+        <label>GL Grower Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GL Quality Management</fullName>
+        <default>false</default>
+        <label>GL Quality Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GL Supplier Management</fullName>
+        <default>false</default>
+        <label>GL Supplier Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Harvest Review</fullName>
+        <default>false</default>
+        <label>Harvest Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hummingbird</fullName>
+        <default>false</default>
+        <label>Hummingbird</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Know-Risk</fullName>
+        <default>false</default>
+        <label>Know-Risk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Market View</fullName>
+        <default>false</default>
+        <label>Market View</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MyFarmManager</fullName>
+        <default>false</default>
+        <label>MyFarmManager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OMS</fullName>
+        <default>false</default>
+        <label>OMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Onsite Software</fullName>
+        <default>false</default>
+        <label>Onsite Software</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Optimize RX</fullName>
+        <default>false</default>
+        <label>Optimize RX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>POD</fullName>
+        <default>false</default>
+        <label>POD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PowerSuite Data Collection</fullName>
+        <default>false</default>
+        <label>PowerSuite Data Collection</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PowerSuite Program Management</fullName>
+        <default>false</default>
+        <label>PowerSuite Program Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retail Execution &amp; DSD</fullName>
+        <default>false</default>
+        <label>Retail Execution &amp; DSD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Agency</fullName>
+        <default>false</default>
+        <label>Sales Agency</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Softrax</fullName>
+        <default>false</default>
+        <label>Softrax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SPCexpress</fullName>
+        <default>false</default>
+        <label>SPCexpress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sure-Check</fullName>
+        <default>false</default>
+        <label>Sure-Check</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TKXS Market Data</fullName>
+        <default>false</default>
+        <label>TKXS Market Data</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TPM</fullName>
+        <default>false</default>
+        <label>TPM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>User Experience</fullName>
+        <default>false</default>
+        <label>User Experience</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Weather Station</fullName>
+        <default>false</default>
+        <label>Weather Station</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WMS</fullName>
+        <default>false</default>
+        <label>WMS</label>
+    </standardValue>
+</StandardValueSet>

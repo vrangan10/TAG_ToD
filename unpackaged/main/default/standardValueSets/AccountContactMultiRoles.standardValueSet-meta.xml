@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Decision Maker</fullName>
+        <default>false</default>
+        <label>Decision Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Executive Sponsor</fullName>
+        <default>false</default>
+        <label>Executive Sponsor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Key Influencer</fullName>
+        <default>false</default>
+        <label>Key Influencer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opportunity-Deal Champion</fullName>
+        <default>false</default>
+        <label>Opportunity-Deal Champion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>System Admin</fullName>
+        <default>false</default>
+        <label>System Admin</label>
+    </standardValue>
+    <standardValue>
+        <fullName>System User</fullName>
+        <default>false</default>
+        <label>System User</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Procurement Contact</fullName>
+        <default>false</default>
+        <label>Procurement Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing Contact</fullName>
+        <default>false</default>
+        <label>Billing Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Day to Day Contact/ Implementation Contact (Internal Resource)</fullName>
+        <default>false</default>
+        <label>Day to Day Contact/ Implementation Contact (Internal Resource)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>User &amp; Stakeholder</fullName>
+        <default>false</default>
+        <label>User &amp; Stakeholder</label>
+    </standardValue>
+</StandardValueSet>

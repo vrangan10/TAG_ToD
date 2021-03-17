@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>Assign_Product_Date</name>
+        <label>Assign Product Date</label>
+        <locationX>835</locationX>
+        <locationY>149</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ServiceDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Year1</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Product_Date_2</name>
+        <label>Assign Product Date</label>
+        <locationX>941</locationX>
+        <locationY>296</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ServiceDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>addyears_on_billing_start_date</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Product_Date_3</name>
+        <label>Assign Product Date</label>
+        <locationX>856</locationX>
+        <locationY>587</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ServiceDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>addyears_on_closed_date</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>IF Opportunity Product  year &gt; 1 and Bill Start Date is not NULL, then set start of revenue schedule to = Bill Start Date Month + ((year - 1)*12) months , ELSE set start date of revenue schedule to = Close Date month + ((year - 1)*12) months.</description>
+        <name>Bill_Start_Date_is_not_NULL</name>
+        <label>Bill Start Date is not NULL</label>
+        <locationX>675</locationX>
+        <locationY>313</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Product_Date_3</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>NO - ITS NULL</defaultConnectorLabel>
+        <rules>
+            <name>YES_NOT_NULL</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Bill_Start_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Product_Date_2</targetReference>
+            </connector>
+            <label>YES - NOT NULL</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if it&apos;s Year 1 on the product being added</description>
+        <name>Year_1_or_Year_X</name>
+        <label>Year 1 or Year X</label>
+        <locationX>497</locationX>
+        <locationY>153</locationY>
+        <defaultConnector>
+            <targetReference>Bill_Start_Date_is_not_NULL</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Year &gt; 1</defaultConnectorLabel>
+        <rules>
+            <name>YES_Year_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Year__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Product_Date</targetReference>
+            </connector>
+            <label>YES Year 1</label>
+        </rules>
+    </decisions>
+    <description>When saving a product in the opportunity validate the year and set correct date. Changes from TAGCRM-1068</description>
+    <formulas>
+        <name>addyears_on_billing_start_date</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+  AND(
+    MONTH( {!$Record.Opportunity.Bill_Start_Date__c} ) = 2,
+    DAY( {!$Record.Opportunity.Bill_Start_Date__c} ) = 29,
+    NOT( 
+      OR( 
+        MOD( YEAR( {!$Record.Opportunity.Bill_Start_Date__c} )+ {!$Record.Year__c} - 1, 400 ) = 0, 
+        AND( 
+          MOD( YEAR( {!$Record.Opportunity.Bill_Start_Date__c} )+ {!$Record.Year__c} - 1, 4 ) = 0,
+          MOD( YEAR( {!$Record.Opportunity.Bill_Start_Date__c} )+ {!$Record.Year__c} - 1, 100 ) != 0
+        )
+      )
+    ) 
+  ),
+  DATE( YEAR( {!$Record.Opportunity.Bill_Start_Date__c}  ) + {!$Record.Year__c} - 1, 3, 1),
+  DATE( YEAR( {!$Record.Opportunity.Bill_Start_Date__c}  ) + {!$Record.Year__c} -1 , MONTH( {!$Record.Opportunity.Bill_Start_Date__c}  ), DAY( {!$Record.Opportunity.Bill_Start_Date__c}  ) )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>The following formula adds num_years to date by checking if the date is February 29 and if the future date is not in a leap year. If these conditions hold true, the formula returns March 1 in the future year. Otherwise the formula sets the Date to the same month and day num_years in the future.</description>
+        <name>addyears_on_closed_date</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+  AND(
+    MONTH({!$Record.Opportunity.CloseDate} ) = 2,
+    DAY( {!$Record.Opportunity.CloseDate} ) = 29,
+    NOT( 
+      OR( 
+        MOD( YEAR( {!$Record.Opportunity.CloseDate})+ {!$Record.Year__c} - 1, 400 ) = 0, 
+        AND( 
+          MOD( YEAR( {!$Record.Opportunity.CloseDate})+ {!$Record.Year__c} - 1, 4 ) = 0,
+          MOD( YEAR( {!$Record.Opportunity.CloseDate})+ {!$Record.Year__c} - 1, 100 ) != 0
+        )
+      )
+    ) 
+  ),
+  DATE( YEAR( {!$Record.Opportunity.CloseDate} ) + {!$Record.Year__c} - 1, 3, 1),
+  DATE( YEAR( {!$Record.Opportunity.CloseDate}  ) + {!$Record.Year__c} -1 , MONTH( {!$Record.Opportunity.CloseDate}  ), DAY( {!$Record.Opportunity.CloseDate}  ) )
+)</expression>
+    </formulas>
+    <formulas>
+        <description>If ServiceDate is empty use Opp Close Date, if not use the set value</description>
+        <name>fServiceDate</name>
+        <dataType>Date</dataType>
+        <expression>IF (
+   OR(
+           ISBLANK({!$Record.ServiceDate}),
+           ISBLANK(TEXT({!$Record.ServiceDate}))
+        ) ,
+          {!$Record.Opportunity.CloseDate}, 
+         {!$Record.ServiceDate}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fToday</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <description>IF Opportunity Product year = 1 and Bill Start Date is not NULL, then set start of revenue schedule to = Bill Start Date Month, else set start date of revenue schedule to = Close Date month.</description>
+        <name>Year1</name>
+        <dataType>Date</dataType>
+        <expression>IF (
+NOT (ISBLANK({!$Record.Opportunity.Bill_Start_Date__c})),
+{!$Record.Opportunity.Bill_Start_Date__c},
+{!$Record.Opportunity.CloseDate}
+)</expression>
+    </formulas>
+    <interviewLabel>Opportunity Product - Set {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Product - Set Schedule Date</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Year_1_or_Year_X</targetReference>
+        </connector>
+        <object>OpportunityLineItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

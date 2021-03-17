@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumberOfEmployees</fullName>
+    <inlineHelpText>Less than 30 Market segment will be Small Business.
+
+Less than 1000 Market segment will be Mid Market.
+
+More than 1000 Market segment will be Large/Enterprise.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+</CustomField>

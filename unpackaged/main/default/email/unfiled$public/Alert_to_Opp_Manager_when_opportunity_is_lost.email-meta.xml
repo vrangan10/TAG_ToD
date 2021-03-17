@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>created for TAGCRM-170</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Alert to Opp Manager when opportunity is lost</name>
+    <style>none</style>
+    <subject>Opportunity has been closed lost</subject>
+    <textOnly>Hello {!Opportunity.Opp_Owner_Manager_Placeholder__c},
+
+{!User.Name} has just marked {!Opportunity.Name} opportunity as closed lost.
+
+Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

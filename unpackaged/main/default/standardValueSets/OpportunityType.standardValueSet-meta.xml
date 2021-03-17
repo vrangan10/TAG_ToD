@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Growth</fullName>
+        <default>false</default>
+        <label>Growth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration</fullName>
+        <default>false</default>
+        <label>Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Logo (Prospect)</fullName>
+        <default>false</default>
+        <label>New Logo (Prospect)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Renewals</fullName>
+        <default>false</default>
+        <label>Renewals</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention</fullName>
+        <default>false</default>
+        <label>Retention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention + Growth</fullName>
+        <default>false</default>
+        <label>Retention + Growth</label>
+    </standardValue>
+</StandardValueSet>

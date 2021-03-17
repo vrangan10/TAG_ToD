@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Level__c</fullName>
+    <description>created for TAGCRM-636</description>
+    <externalId>false</externalId>
+    <label>Reporting Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hardware Products</fullName>
+                <default>false</default>
+                <label>Hardware Products</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>Software Products</fullName>
+                <default>false</default>
+                <label>Software Products</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

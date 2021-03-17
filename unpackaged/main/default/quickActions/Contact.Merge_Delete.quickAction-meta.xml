@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is for Ticket 316. Operations ticket from button to merge or delete contacts submitted by user.</description>
+    <flowDefinition>Merge_and_Delete</flowDefinition>
+    <label>Merge &amp; Delete</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

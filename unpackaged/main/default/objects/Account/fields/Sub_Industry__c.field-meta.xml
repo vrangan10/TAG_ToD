@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party Applicator</fullName>
+                <default>false</default>
+                <label>3rd Party Applicator</label>
+            </value>
+            <value>
+                <fullName>3rd Party Sampler</fullName>
+                <default>false</default>
+                <label>3rd Party Sampler</label>
+            </value>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Aggregator</fullName>
+                <default>false</default>
+                <label>Aggregator</label>
+            </value>
+            <value>
+                <fullName>Agronomist</fullName>
+                <default>false</default>
+                <label>Agronomist</label>
+            </value>
+            <value>
+                <fullName>AIP (Approved Insurance Provider)</fullName>
+                <default>false</default>
+                <label>AIP (Approved Insurance Provider)</label>
+            </value>
+            <value>
+                <fullName>Beef producer</fullName>
+                <default>false</default>
+                <label>Beef producer</label>
+            </value>
+            <value>
+                <fullName>Chemical Manufacturer</fullName>
+                <default>false</default>
+                <label>Chemical Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Co-Operative</fullName>
+                <default>false</default>
+                <label>Co-Operative</label>
+            </value>
+            <value>
+                <fullName>Custom Services</fullName>
+                <default>false</default>
+                <label>Custom Services</label>
+            </value>
+            <value>
+                <fullName>Dairy producer</fullName>
+                <default>false</default>
+                <label>Dairy producer</label>
+            </value>
+            <value>
+                <fullName>Distributor/Logistics</fullName>
+                <default>false</default>
+                <label>Distributor/Logistics</label>
+            </value>
+            <value>
+                <fullName>Equipment Dealer</fullName>
+                <default>false</default>
+                <label>Equipment Dealer</label>
+            </value>
+            <value>
+                <fullName>Equipment Manufacturer</fullName>
+                <default>false</default>
+                <label>Equipment Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Farm Mgmt Company</fullName>
+                <default>false</default>
+                <label>Farm Mgmt Company</label>
+            </value>
+            <value>
+                <fullName>Fertilizer Manufacturer</fullName>
+                <default>false</default>
+                <label>Fertilizer Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Financial &amp; Banking</fullName>
+                <default>false</default>
+                <label>Financial &amp; Banking</label>
+            </value>
+            <value>
+                <fullName>FMIS (Farm Management Information System)</fullName>
+                <default>false</default>
+                <label>FMIS (Farm Management Information System)</label>
+            </value>
+            <value>
+                <fullName>Food Retailer</fullName>
+                <default>false</default>
+                <label>Food Retailer</label>
+            </value>
+            <value>
+                <fullName>Full Service Location</fullName>
+                <default>false</default>
+                <label>Full Service Location</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Hedge-Fund/Investment Company</fullName>
+                <default>false</default>
+                <label>Hedge-Fund/Investment Company</label>
+            </value>
+            <value>
+                <fullName>High Value Crop Grower</fullName>
+                <default>false</default>
+                <label>High Value Crop Grower</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Lab Company</fullName>
+                <default>false</default>
+                <label>Lab Company</label>
+            </value>
+            <value>
+                <fullName>Organization</fullName>
+                <default>false</default>
+                <label>Organization</label>
+            </value>
+            <value>
+                <fullName>Permanent Crop Grower</fullName>
+                <default>false</default>
+                <label>Permanent Crop Grower</label>
+            </value>
+            <value>
+                <fullName>Precision Consultant</fullName>
+                <default>false</default>
+                <label>Precision Consultant</label>
+            </value>
+            <value>
+                <fullName>Processor</fullName>
+                <default>false</default>
+                <label>Processor</label>
+            </value>
+            <value>
+                <fullName>Restaurants/Quick Serve</fullName>
+                <default>false</default>
+                <label>Restaurants/Quick Serve</label>
+            </value>
+            <value>
+                <fullName>Retail Only</fullName>
+                <default>false</default>
+                <label>Retail Only</label>
+            </value>
+            <value>
+                <fullName>Row Crop Grower</fullName>
+                <default>false</default>
+                <label>Row Crop Grower</label>
+            </value>
+            <value>
+                <fullName>Sales Agency/Food Broker</fullName>
+                <default>false</default>
+                <label>Sales Agency/Food Broker</label>
+            </value>
+            <value>
+                <fullName>Seed Manufacturer</fullName>
+                <default>false</default>
+                <label>Seed Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Specialty Manufacturer</fullName>
+                <default>false</default>
+                <label>Specialty Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equipment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

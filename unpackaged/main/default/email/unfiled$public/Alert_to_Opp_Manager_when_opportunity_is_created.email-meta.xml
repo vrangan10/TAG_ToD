@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>created for TAGCRM-169</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Alert to Opp Manager when opportunity is created</name>
+    <style>none</style>
+    <subject>New Opportunity has been created</subject>
+    <textOnly>Hello {!Opportunity.Opp_Owner_Manager_Placeholder__c},
+
+This {!Opportunity.Name} Opportunity has been created for the {!Opportunity.Account} Account
+
+Thank you</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

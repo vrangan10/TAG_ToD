@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LostFieldsMandWhenStageIsClosedLost</fullName>
+    <active>true</active>
+    <description>created for TAGCRM-127</description>
+    <errorConditionFormula>ISPICKVAL(StageName , &apos;Closed Lost&apos;) &amp;&amp;  (ISPICKVAL(Lost_Reason__c, &apos;&apos;) || ISPICKVAL(Lost_Reason_Details__c, &apos;&apos;) ||
+ISBLANK(Competitor_Name__c)
+) &amp;&amp; NOT(ISCHANGED( Current_Systems__c ))</errorConditionFormula>
+    <errorMessage>When Stage is Closed Lost, please select Lost Reason, Lost Reason Details and Competitor</errorMessage>
+</ValidationRule>

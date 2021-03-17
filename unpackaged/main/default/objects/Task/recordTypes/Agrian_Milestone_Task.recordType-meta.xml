@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agrian_Milestone_Task</fullName>
+    <active>true</active>
+    <description>Task Record Type to capture Customer milestones for Agrian</description>
+    <label>Agrian Milestone Task</label>
+    <picklistValues>
+        <picklist>Customer_Milestone__c</picklist>
+        <values>
+            <fullName>Account %26 User Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiscal %26 Software Adoption Goals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Introductions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Checkin - Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Checkin - Post Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Checkin - Pre Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Checkin - Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organization Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training and Usage Needs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Milestone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PSO Activity</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

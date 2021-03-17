@@ -1,0 +1,5 @@
+Hello {!Opportunity.Opp_Owner_Manager_Placeholder__c}, <br> <br>
+
+{!User.Name} has just marked {!Opportunity.Name} opportunity as  <b>closed lost</b>.<br><br>
+
+Thank you.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NextStepDueDateNotGreaterThanCloseDate</fullName>
+    <active>true</active>
+    <description>created for TAGCRM-552</description>
+    <errorConditionFormula>Next_Step_Due_Date__c &gt;  CloseDate</errorConditionFormula>
+    <errorMessage>Next Step Due Date cannot be greater than Close Date</errorMessage>
+</ValidationRule>

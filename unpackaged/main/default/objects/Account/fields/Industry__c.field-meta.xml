@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Industry__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ag/Chem Manufacturer</fullName>
+                <default>false</default>
+                <label>Ag/Chem Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Ag Input Retailer/Distributor</fullName>
+                <default>false</default>
+                <label>Ag Input Retailer/Distributor</label>
+            </value>
+            <value>
+                <fullName>CPG (Manufacturer)</fullName>
+                <default>false</default>
+                <label>CPG (Manufacturer)</label>
+            </value>
+            <value>
+                <fullName>Crop Consultants</fullName>
+                <default>false</default>
+                <label>Crop Consultants</label>
+            </value>
+            <value>
+                <fullName>Crop Insurance</fullName>
+                <default>false</default>
+                <label>Crop Insurance</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Equipment Company</fullName>
+                <default>false</default>
+                <label>Equipment Company</label>
+            </value>
+            <value>
+                <fullName>ERP Management</fullName>
+                <default>false</default>
+                <label>ERP Management</label>
+            </value>
+            <value>
+                <fullName>Farm</fullName>
+                <default>false</default>
+                <label>Farm</label>
+            </value>
+            <value>
+                <fullName>ISV (Independent software vendor)</fullName>
+                <default>false</default>
+                <label>ISV (Independent software vendor)</label>
+            </value>
+            <value>
+                <fullName>Lab Company</fullName>
+                <default>false</default>
+                <label>Lab Company</label>
+            </value>
+            <value>
+                <fullName>Ranch</fullName>
+                <default>false</default>
+                <label>Ranch</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Sales Agency/ Food Broker</fullName>
+                <default>false</default>
+                <label>Sales Agency/ Food Broker</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Organization</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>AIP (Approved Insurance Provider)</controllingFieldValue>
+            <controllingFieldValue>Agent</controllingFieldValue>
+            <controllingFieldValue>Government</controllingFieldValue>
+            <valueName>Crop Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beef producer</controllingFieldValue>
+            <controllingFieldValue>Dairy producer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Ranch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Row Crop Grower</controllingFieldValue>
+            <controllingFieldValue>Permanent Crop Grower</controllingFieldValue>
+            <controllingFieldValue>High Value Crop Grower</controllingFieldValue>
+            <controllingFieldValue>Hedge-Fund/Investment Company</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Farm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Processor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>CPG (Manufacturer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor/Logistics</controllingFieldValue>
+            <controllingFieldValue>Aggregator</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Only</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Co-Operative</controllingFieldValue>
+            <controllingFieldValue>Full Service Location</controllingFieldValue>
+            <valueName>Ag Input Retailer/Distributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Food Retailer</controllingFieldValue>
+            <controllingFieldValue>Restaurants/Quick Serve</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agronomist</controllingFieldValue>
+            <controllingFieldValue>Precision Consultant</controllingFieldValue>
+            <controllingFieldValue>3rd Party Sampler</controllingFieldValue>
+            <controllingFieldValue>Farm Mgmt Company</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Crop Consultants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equipment Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>3rd Party Applicator</controllingFieldValue>
+            <controllingFieldValue>Equipment Dealer</controllingFieldValue>
+            <valueName>Equipment Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lab Company</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Lab Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Agency/Food Broker</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Sales Agency/ Food Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Financial &amp; Banking</controllingFieldValue>
+            <controllingFieldValue>Custom Services</controllingFieldValue>
+            <valueName>ERP Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Chemical Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Specialty Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Seed Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Fertilizer Manufacturer</controllingFieldValue>
+            <valueName>Ag/Chem Manufacturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>FMIS (Farm Management Information System)</controllingFieldValue>
+            <valueName>ISV (Independent software vendor)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

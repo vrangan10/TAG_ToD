@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason_Details__c</fullName>
+    <description>Created for TAGCRM-558, detailed reasons for lost opportunity</description>
+    <externalId>false</externalId>
+    <label>Lost Reason Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lost_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bankruptcy</fullName>
+                <default>false</default>
+                <label>Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>L2R Experience with TELUS</fullName>
+                <default>false</default>
+                <label>L2R Experience with TELUS</label>
+            </value>
+            <value>
+                <fullName>No Internal Support (Decision Maker)</fullName>
+                <default>false</default>
+                <label>No Internal Support (Decision Maker)</label>
+            </value>
+            <value>
+                <fullName>Status quo</fullName>
+                <default>false</default>
+                <label>Status quo</label>
+            </value>
+            <value>
+                <fullName>TELUS Brand Recognition/Reputation</fullName>
+                <default>false</default>
+                <label>TELUS Brand Recognition/Reputation</label>
+            </value>
+            <value>
+                <fullName>TELUS Ag Brand Recognition/Reputation</fullName>
+                <default>false</default>
+                <label>TELUS Ag Brand Recognition/Reputation</label>
+            </value>
+            <value>
+                <fullName>TELUS Ag Partner Expertise</fullName>
+                <default>false</default>
+                <label>TELUS Ag Partner Expertise</label>
+            </value>
+            <value>
+                <fullName>Poor Sales Enablement Tools</fullName>
+                <default>false</default>
+                <label>Poor Sales Enablement Tools</label>
+            </value>
+            <value>
+                <fullName>Poor TELUS Ag Operational Responsiveness</fullName>
+                <default>false</default>
+                <label>Poor TELUS Ag Operational Responsiveness</label>
+            </value>
+            <value>
+                <fullName>Feature(s) Not Aligned to Customer Needs</fullName>
+                <default>false</default>
+                <label>Feature(s) Not Aligned to Customer Needs</label>
+            </value>
+            <value>
+                <fullName>Footprint</fullName>
+                <default>false</default>
+                <label>Footprint</label>
+            </value>
+            <value>
+                <fullName>Lack of Demo/Technology Lab Support</fullName>
+                <default>false</default>
+                <label>Lack of Demo/Technology Lab Support</label>
+            </value>
+            <value>
+                <fullName>No Self-serve/Self-Install Capabilities</fullName>
+                <default>false</default>
+                <label>No Self-serve/Self-Install Capabilities</label>
+            </value>
+            <value>
+                <fullName>Reliability (Network/Solution)</fullName>
+                <default>false</default>
+                <label>Reliability (Network/Solution)</label>
+            </value>
+            <value>
+                <fullName>Product Strategic Direction</fullName>
+                <default>false</default>
+                <label>Product Strategic Direction</label>
+            </value>
+            <value>
+                <fullName>Transition Plan Poor or Missing</fullName>
+                <default>false</default>
+                <label>Transition Plan Poor or Missing</label>
+            </value>
+            <value>
+                <fullName>Implementation Charges Too High</fullName>
+                <default>false</default>
+                <label>Implementation Charges Too High</label>
+            </value>
+            <value>
+                <fullName>Non-competitive Pricing</fullName>
+                <default>false</default>
+                <label>Non-competitive Pricing</label>
+            </value>
+            <value>
+                <fullName>Pricing Offer too Complex</fullName>
+                <default>false</default>
+                <label>Pricing Offer too Complex</label>
+            </value>
+            <value>
+                <fullName>Switching/Migration Cost Too Expensive</fullName>
+                <default>false</default>
+                <label>Switching/Migration Cost Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Duplicate of an Existing Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate of an Existing Opportunity</label>
+            </value>
+            <value>
+                <fullName>Marketing Lead or Initiative Not Valid</fullName>
+                <default>false</default>
+                <label>Marketing Lead or Initiative Not Valid</label>
+            </value>
+            <value>
+                <fullName>Other (See Notes)</fullName>
+                <default>false</default>
+                <label>Other (See Notes)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>Bankruptcy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>L2R Experience with TELUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>No Internal Support (Decision Maker)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>Status quo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>TELUS Brand Recognition/Reputation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>TELUS Ag Brand Recognition/Reputation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <valueName>TELUS Ag Partner Expertise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic Alignment &amp; Relationship</controllingFieldValue>
+            <controllingFieldValue>Operation Sales Process</controllingFieldValue>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <controllingFieldValue>Pricing &amp; Cost</controllingFieldValue>
+            <controllingFieldValue>Invalid Opportunity (Exceptions Only)</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other (See Notes)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operation Sales Process</controllingFieldValue>
+            <valueName>Poor Sales Enablement Tools</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operation Sales Process</controllingFieldValue>
+            <valueName>Poor TELUS Ag Operational Responsiveness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Feature(s) Not Aligned to Customer Needs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Footprint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Lack of Demo/Technology Lab Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>No Self-serve/Self-Install Capabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Reliability (Network/Solution)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Product Strategic Direction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Solution Fit</controllingFieldValue>
+            <valueName>Transition Plan Poor or Missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing &amp; Cost</controllingFieldValue>
+            <valueName>Implementation Charges Too High</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing &amp; Cost</controllingFieldValue>
+            <valueName>Non-competitive Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing &amp; Cost</controllingFieldValue>
+            <valueName>Pricing Offer too Complex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing &amp; Cost</controllingFieldValue>
+            <valueName>Switching/Migration Cost Too Expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Opportunity (Exceptions Only)</controllingFieldValue>
+            <valueName>Duplicate of an Existing Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Opportunity (Exceptions Only)</controllingFieldValue>
+            <valueName>Marketing Lead or Initiative Not Valid</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

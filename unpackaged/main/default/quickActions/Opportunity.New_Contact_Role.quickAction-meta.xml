@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a new Opportunity Contact Role</description>
+    <flowDefinition>Create_Contact_Roles_on_Opportunity</flowDefinition>
+    <label>New Contact Role</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

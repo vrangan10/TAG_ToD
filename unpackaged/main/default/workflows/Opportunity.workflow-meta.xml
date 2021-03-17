@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_When_Opportunity_Owner_is_Changed</fullName>
+        <description>Alert When Opportunity Owner is Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_When_Opportunity_Owner_is_Changed</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_to_Account_owner_when_opp_is_created</fullName>
+        <description>Send notification to Account owner when opp is created</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_to_Account_Owner_when_opportunity_is_created</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_to_Opp_owner_before_Trial</fullName>
+        <description>Send notification to Opp owner before Trial/Sandbox End Date expires</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Trail_Sandbox_Expire_Opp_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_to_Opp_owner_manager_when_opp_is_created</fullName>
+        <description>Send notification to Opp owner manager when opp is created</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Opp_Owner_Manager_Email_Placeholder__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_to_Opp_Manager_when_opportunity_is_created</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_to_Opp_owner_manager_when_opp_is_lost</fullName>
+        <description>Send notification to Opp owner manager when opp is lost</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Opp_Owner_Manager_Email_Placeholder__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_to_Opp_Manager_when_opportunity_is_lost</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_when_Deal_is_won_with_Threshold_cross</fullName>
+        <description>Send notification when Deal is won with Threshold cross</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Executives</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Email_Alert_for_Opp_Deal_Size</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Top_Opportunity_field_to_FALSE</fullName>
+        <description>Set Top Opportunity field to FALSE</description>
+        <field>Top_Opportunity__c</field>
+        <literalValue>0</literalValue>
+        <name>Set Top Opportunity field to FALSE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Date_Change</fullName>
+        <field>Last_Stage_Change__c</field>
+        <formula>NOW()</formula>
+        <name>Update Last Date Change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opportunity_Name</fullName>
+        <description>created for TAGCRM-162. When Opp is created, Update Opportunity Name with year of close date, account name and project name</description>
+        <field>Name</field>
+        <formula>IF( (LEN(TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp;  Account.Name &amp; &apos;-&apos; &amp; Project_Name__c))&gt;120 ,  MID(TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp;  Account.Name &amp; &apos;-&apos; &amp; Project_Name__c, 0, 120) , TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp;  Account.Name &amp; &apos;-&apos; &amp; Project_Name__c)</formula>
+        <name>Update Opportunity Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opportunity_Unique_Identifier</fullName>
+        <field>Opportunity_Unique_Identifier__c</field>
+        <formula>IF( (LEN(TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp; Account.Name &amp; &apos;-&apos; &amp; Project_Name__c))&gt;120 , MID(TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp; Account.Name &amp; &apos;-&apos; &amp; Project_Name__c, 0, 120) , TEXT(YEAR(CloseDate)) &amp; &apos;-&apos; &amp; Account.Name &amp; &apos;-&apos; &amp; Project_Name__c)</formula>
+        <name>Update Opportunity Unique Identifier</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Last Date Change</fullName>
+        <actions>
+            <name>Update_Last_Date_Change</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>created for TAGCRM-178. When Opp stage is changed, update Last Date Change field</description>
+        <formula>ISNEW() || ISCHANGED( StageName )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp Name Modification</fullName>
+        <actions>
+            <name>Update_Opportunity_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Opportunity_Unique_Identifier</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Project_Name__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <description>created for TAGCRM-162. When Opp is created, Update Opportunity Name with year of close date, account name and project name</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp moves to Sit 2</fullName>
+        <actions>
+            <name>Set_Top_Opportunity_field_to_FALSE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>SIT 2: Advocate Solution</value>
+        </criteriaItems>
+        <description>created for TAGCRM-830. When Opp stage is changed to SIT 2, uncheck Top x Opportunity field</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Threshold opp alerts</fullName>
+        <actions>
+            <name>Send_notification_when_Deal_is_won_with_Threshold_cross</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>greaterOrEqual</operation>
+            <value>&quot;USD 1,000,000&quot;</value>
+        </criteriaItems>
+        <description>created for TAGCRM-174</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Trial Sandbox End Date expire in 7 days</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Trial_Sandbox_End_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>when Trial Sandbox End Date expire in 7 days, send opportunity owner an email</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Send_notification_to_Opp_owner_before_Trial</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.Trial_Sandbox_End_Date__c</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

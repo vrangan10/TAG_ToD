@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Profile__c</fullName>
+    <description>created for TAGCRM-547</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe the customer&apos;s project or application. What are the customer&apos;s business objectives for the project? What is the total cost and/or budget for the project? How does the project affect the customer&apos;s overall business?</inlineHelpText>
+    <label>Opportunity Profile</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

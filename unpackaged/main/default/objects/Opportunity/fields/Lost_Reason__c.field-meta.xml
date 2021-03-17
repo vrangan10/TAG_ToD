@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason__c</fullName>
+    <description>Created for TAGCRM-558, lost opportunity reason</description>
+    <externalId>false</externalId>
+    <label>Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Strategic Alignment &amp; Relationship</fullName>
+                <default>false</default>
+                <label>Strategic Alignment &amp; Relationship</label>
+            </value>
+            <value>
+                <fullName>Operation Sales Process</fullName>
+                <default>false</default>
+                <label>Operation Sales Process</label>
+            </value>
+            <value>
+                <fullName>Solution Fit</fullName>
+                <default>false</default>
+                <label>Solution Fit</label>
+            </value>
+            <value>
+                <fullName>Pricing &amp; Cost</fullName>
+                <default>false</default>
+                <label>Pricing &amp; Cost</label>
+            </value>
+            <value>
+                <fullName>Invalid Opportunity (Exceptions Only)</fullName>
+                <default>false</default>
+                <label>Invalid Opportunity (Exceptions Only)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Level__c</fullName>
+    <description>created for TAGCRM-934</description>
+    <externalId>false</externalId>
+    <formula>TEXT( PricebookEntry.Product2.Reporting_Level__c )</formula>
+    <label>Reporting Level</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

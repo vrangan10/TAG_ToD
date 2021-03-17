@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organic__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>created for TAGCRM-1024</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please specify whether the Company for the Lead has a specialty in Organic product</inlineHelpText>
+    <label>Organic</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>Looks like these could be duplicates! Would you like to merge them instead?</alertText>
+    <description>Duplicate rule on Contact to meet the second criteria</description>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>Email</field>
+            <operation>notEqual</operation>
+            <value>none@telusagriculture.com</value>
+            <sortOrder>1</sortOrder>
+            <table>Contact</table>
+        </duplicateRuleFilterItems>
+        <duplicateRuleFilterItems>
+            <field>Override_Duplicate__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+            <sortOrder>2</sortOrder>
+            <table>Contact</table>
+        </duplicateRuleFilterItems>
+        <duplicateRuleFilterItems>
+            <field>Allow_Warning_Dup_Contact__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+            <sortOrder>3</sortOrder>
+            <table>Contact</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Contact</matchRuleSObjectType>
+        <matchingRule>Matching_Rule_On_Contacts_2</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Contact Duplicate Rule 2</masterLabel>
+    <operationsOnInsert>Alert</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>2</sortOrder>
+</DuplicateRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Stores the date of the Last Status Change --></help>
+        <label><!-- Lead Status Change Date --></label>
+        <name>Lead_Status_Change_Date__c</name>
+    </CustomFieldTranslation>

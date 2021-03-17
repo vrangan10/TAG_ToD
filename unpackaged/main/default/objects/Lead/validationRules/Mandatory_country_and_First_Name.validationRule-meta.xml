@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_country_and_First_Name</fullName>
+    <active>true</active>
+    <description>Make Country and First Name Mandatory.</description>
+    <errorConditionFormula>OR
+(
+ISBLANK( Country ),
+ISBLANK( FirstName)
+)</errorConditionFormula>
+    <errorMessage>First Name and Country are required to save Leads!</errorMessage>
+</ValidationRule>

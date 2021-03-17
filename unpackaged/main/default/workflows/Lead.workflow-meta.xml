@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_notification_alert_when_Lead_Owner_is_changed</fullName>
+        <description>Send notification alert when Lead Owner is changed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Last_Status_Change_Date</fullName>
+        <description>Field update to store last lead status change date</description>
+        <field>Lead_Status_Change_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Update Last Status Change Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Lead Status Change Date</fullName>
+        <actions>
+            <name>Update_Last_Status_Change_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>created for TAGCRM-584: Update Lead Status Change Date</description>
+        <formula>OR( ISNEW(), ISCHANGED( Status ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

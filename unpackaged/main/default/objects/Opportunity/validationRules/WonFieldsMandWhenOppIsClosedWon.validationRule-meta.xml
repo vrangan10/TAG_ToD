@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WonFieldsMandWhenOppIsClosedWon</fullName>
+    <active>true</active>
+    <description>created for TAGCRM-130,127,128,185</description>
+    <errorConditionFormula>ISPICKVAL( StageName , &apos;Closed Won&apos;) &amp;&amp; 
+(
+ISPICKVAL(Won_Reason__c, &apos;&apos;)  || 
+ISPICKVAL(Won_Reason_Details__c, &apos;&apos;)||
+ISBLANK(Competitor_Name__c)
+) &amp;&amp; NOT(ISCHANGED( Current_Systems__c ))</errorConditionFormula>
+    <errorMessage>Won Reason, Won Reason Details and Competitor is mandatory when Opportunity is closed Won.</errorMessage>
+</ValidationRule>

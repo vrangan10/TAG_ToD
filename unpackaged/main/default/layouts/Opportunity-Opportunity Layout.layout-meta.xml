@@ -381,6 +381,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Opportunity.New_Contact_Role</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>LogACall</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -435,11 +440,6 @@
             <actionType>QuickAction</actionType>
             <sortOrder>11</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Opportunity.New_Contact_Role</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <quickActionList>
         <quickActionListItems>
@@ -466,14 +466,14 @@
     </quickActionList>
     <relatedLists>
         <fields>ContactName</fields>
-        <fields>Role</fields>
         <fields>ContactTitle</fields>
-        <fields>IsPrimary</fields>
-        <fields>ContactPhone</fields>
         <fields>ContactEmail</fields>
+        <fields>ContactPhone</fields>
+        <fields>Role</fields>
         <fields>ContactAccountName</fields>
+        <fields>IsPrimary</fields>
         <relatedList>RelatedContactRoleList</relatedList>
-        <sortField>Role</sortField>
+        <sortField>ContactName</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
@@ -486,16 +486,18 @@
         <fields>TotalPrice</fields>
         <fields>Description</fields>
         <fields>ProductCode</fields>
+        <fields>Revenue_Model__c</fields>
         <relatedList>RelatedLineItemList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <relatedList>RelatedEntityHistoryList</relatedList>
+        <sortField>Year__c</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>MemberName</fields>
-        <fields>OppAccessLevel</fields>
         <fields>TeamMemberRole</fields>
+        <fields>OppAccessLevel</fields>
         <relatedList>RelatedOpportunitySalesTeam</relatedList>
+        <sortField>MemberName</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>SplitOwner</fields>
@@ -504,19 +506,31 @@
         <fields>SplitAmount</fields>
         <fields>SplitNote</fields>
         <relatedList>RelatedOpportunitySplits</relatedList>
+        <sortField>SplitType</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>CONTRACT.CONTRACT_NUMBER</fields>
-        <fields>CONTRACT.NAME</fields>
-        <fields>SALES.ACCOUNT.NAME</fields>
+        <fields>CORE.USERS.ALIAS</fields>
+        <fields>CONTRACT.START_DATE</fields>
+        <fields>CONTRACT.END_DATE</fields>
         <fields>CONTRACT.STATUS</fields>
+        <fields>CONTRACT_TERM</fields>
+        <fields>CONTRACT.CURRENCY_ISO_CODE</fields>
+        <fields>Auto_Renew__c</fields>
+        <fields>SALES.ACCOUNT.NAME</fields>
         <relatedList>Contract.Opportunity__c</relatedList>
+        <sortField>CONTRACT.CONTRACT_NUMBER</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedOpportunityHistoryList</relatedList>

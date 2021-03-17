@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -52,10 +51,6 @@
                 <behavior>Edit</behavior>
                 <field>LinkedIn_Bio__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Closed_Date__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -88,6 +83,10 @@
                 <behavior>Edit</behavior>
                 <field>RecordTypeId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Closed_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -100,6 +99,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Exclude_for_Report__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -155,12 +158,23 @@
         </layoutColumns>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Name</fields>
+        <fields>ParentId</fields>
+        <fields>CurrencyIsoCode</fields>
+        <fields>Account_Stage__c</fields>
+    </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>AccountHierarchy</actionName>
+            <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>LogACall</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Clone</actionName>
@@ -171,16 +185,6 @@
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>LogACall</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>NewTask</actionName>
@@ -227,6 +231,11 @@
             <actionType>QuickAction</actionType>
             <sortOrder>13</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>AccountHierarchy</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
     </platformActionList>
     <relatedContent>
         <relatedContentItems>
@@ -239,25 +248,34 @@
         <fields>CONTACT.FULL_NAME</fields>
         <fields>CONTACT.ACCOUNT_NAME</fields>
         <fields>ACCCONRELATION.IS_DIRECT</fields>
-        <fields>CONTACT.EMAIL</fields>
-        <fields>ACCCONRELATION.ROLES</fields>
-        <fields>ACCCONRELATION.START_DATE</fields>
-        <fields>ACCCONRELATION.END_DATE</fields>
         <fields>Contact_Status__c</fields>
+        <fields>CONTACT.EMAIL</fields>
+        <fields>CONTACT.PHONE3</fields>
+        <fields>LinkedIn_Bio__c</fields>
+        <fields>Do_Not_Contact__c</fields>
+        <fields>Preferred_Language__c</fields>
         <relatedList>RelatedAccountContactRelationList</relatedList>
+        <sortField>CONTACT.FULL_NAME</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
-        <fields>NAME</fields>
         <fields>CASES.SUBJECT</fields>
+        <fields>CASES.STATUS</fields>
         <fields>CASES.PRIORITY</fields>
         <fields>CASES.CREATED_DATE_DATE_ONLY</fields>
-        <fields>CASES.STATUS</fields>
+        <fields>NAME</fields>
         <fields>OWNER_NAME</fields>
+        <fields>CASES.RECORDTYPE</fields>
         <relatedList>RelatedCaseList</relatedList>
+        <sortField>CASES.CREATED_DATE_DATE_ONLY</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedEntityHistoryList</relatedList>
+        <fields>PRODUCT2.NAME</fields>
+        <fields>PRODUCT2.CUSTOMER_PRODUCT_ID</fields>
+        <fields>PRODUCT2.DESCRIPTION</fields>
+        <relatedList>Product2.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -268,6 +286,9 @@
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>EVENT.LOCATION</fields>
         <relatedList>RelatedActivityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -291,7 +312,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00he0000000Z8wz</masterLabel>
+        <masterLabel>00h1g000001lIcn</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

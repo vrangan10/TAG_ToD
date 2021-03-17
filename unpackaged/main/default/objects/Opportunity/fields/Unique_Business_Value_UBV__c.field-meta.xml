@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unique_Business_Value_UBV__c</fullName>
+    <description>created for TAGCRM-549</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Define your unique business value with a value proposition that is specific to the customer, defines a measurable business result and creates credibility by proving your ability to deliver. Is this confirmed with the customer?</inlineHelpText>
+    <label>Unique Business Value (UBV)</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

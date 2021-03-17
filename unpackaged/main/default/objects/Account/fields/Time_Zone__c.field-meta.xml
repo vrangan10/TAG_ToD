@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Zone__c</fullName>
+    <description>created for TAGCRM-433</description>
+    <externalId>false</externalId>
+    <inlineHelpText>pick the time zone of the account</inlineHelpText>
+    <label>Time Zone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>TimeZone</valueSetName>
+    </valueSet>
+</CustomField>

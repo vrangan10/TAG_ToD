@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cycle_Time_SIT_6_to_SIT_5__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>created for TAGCRM-181</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Days b/w SIT 6 to SIT 5 stage</inlineHelpText>
+    <label>Cycle Time  SIT 6 to SIT 5</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

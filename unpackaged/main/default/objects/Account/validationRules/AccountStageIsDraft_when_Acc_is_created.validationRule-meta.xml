@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountStageIsDraft_when_Acc_is_created</fullName>
+    <active>true</active>
+    <description>Created for TAGCRM-141, 405</description>
+    <errorConditionFormula>ISNEW() &amp;&amp;  NOT(ISPICKVAL( Account_Stage__c , &apos;Draft&apos;))</errorConditionFormula>
+    <errorMessage>Please choose Account Stage as Draft</errorMessage>
+</ValidationRule>

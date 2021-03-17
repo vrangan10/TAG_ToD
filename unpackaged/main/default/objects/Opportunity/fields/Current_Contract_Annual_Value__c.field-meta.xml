@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Contract_Annual_Value__c</fullName>
+    <description>created for TAGCRM-594</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Current Contract Annual Revenue. Enter manually based on customer’s existing contract. If no contract, leave as zero/null.</inlineHelpText>
+    <label>CCAR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
