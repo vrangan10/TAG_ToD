@@ -1,6 +1,0 @@
-Hello {!Opportunity.Opp_Owner_Manager_Placeholder__c}, <br> <br>
-
-This {!Opportunity.Name} Opportunity has been created for the {!Opportunity.Account} Account<br><br>
-
-
-Thank you

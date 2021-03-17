@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>TrialSandboxDateMandWhnTrialSandboxChkd</fullName>
-    <active>true</active>
-    <description>created for TAGCRM-126</description>
-    <errorConditionFormula>Trial_or_Sandbox_Provided__c &amp;&amp;  ISBLANK( Trial_Sandbox_End_Date__c )</errorConditionFormula>
-    <errorMessage>Please enter Trial/Sandbox End Date when Trial or Sandbox Provided is checked</errorMessage>
-</ValidationRule>

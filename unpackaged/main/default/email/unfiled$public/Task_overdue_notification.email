@@ -1,9 +1,0 @@
-Hi,<br><br>
-
-TASK OVERDUE NOTIFICATION<br><br>
-
-Please be informed that below task is overdue:<br>
-
-{!Task.Link}<br><br>
-
-Thanks

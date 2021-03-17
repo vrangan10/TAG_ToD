@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-        <help><!-- Select Customer System Stack which caused the account to be won/lost --></help>
-        <label><!-- Customer System Stack --></label>
-        <name>Customer_System_Stack__c</name>
-    </CustomFieldTranslation>

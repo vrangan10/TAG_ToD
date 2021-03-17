@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Competitor_Mand_when_stage_is_SIT1</fullName>
-    <active>true</active>
-    <description>created for TAGCRM-1031</description>
-    <errorConditionFormula>ISPICKVAL( StageName , &apos;SIT 1: Close Opportunity&apos;) &amp;&amp; ISBLANK( Competitor_Name__c )</errorConditionFormula>
-    <errorMessage>When stage is SIT 1: Close Opportunity, please choose Competitor(s) before saving.</errorMessage>
-</ValidationRule>

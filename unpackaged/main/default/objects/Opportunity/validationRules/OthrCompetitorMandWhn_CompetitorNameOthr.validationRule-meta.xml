@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>OthrCompetitorMandWhn_CompetitorNameOthr</fullName>
-    <active>true</active>
-    <description>created for TAGCRM-127,128</description>
-    <errorConditionFormula>INCLUDES( Competitor_Name__c , &apos;Other&apos;) &amp;&amp; ISBLANK( Other_Competitor__c )</errorConditionFormula>
-    <errorMessage>If Competitor Name is selected as Other, please enter Other Competitor before save.</errorMessage>
-</ValidationRule>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Year_Founded_Text_Not_Allowed</fullName>
-    <active>true</active>
-    <description>Year Founded shouldn&apos;t be allowed to store text values and should only store numbers</description>
-    <errorConditionFormula>NOT(ISBLANK(Year_Founded__c)) &amp;&amp; NOT(ISNUMBER( Year_Founded__c ))</errorConditionFormula>
-    <errorMessage>Please enter only a numeric value for this field!</errorMessage>
-</ValidationRule>

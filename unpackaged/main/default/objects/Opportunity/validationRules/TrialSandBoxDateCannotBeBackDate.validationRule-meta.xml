@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>TrialSandBoxDateCannotBeBackDate</fullName>
-    <active>true</active>
-    <description>created for TAGCRM-126.</description>
-    <errorConditionFormula>(ISCHANGED(Trial_Sandbox_End_Date__c )|| ISNEW()) &amp;&amp; Trial_Sandbox_End_Date__c &lt; TODAY()</errorConditionFormula>
-    <errorMessage>Trial/Sandbox End Date should be greater than or equal to current date</errorMessage>
-</ValidationRule>

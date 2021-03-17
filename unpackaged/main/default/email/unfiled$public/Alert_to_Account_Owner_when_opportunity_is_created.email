@@ -1,6 +1,0 @@
-Hello {!Opportunity.Account_Owner_Placeholder__c},<br><br>
-
-Please be advised that {!Opportunity.CreatedBy} has created {!Opportunity.Name} on {!Opportunity.Account}.The following contacts are associated on this deal:<br>
-{!Opportunity.contactURL__c} <br><br>
-
-Thank You

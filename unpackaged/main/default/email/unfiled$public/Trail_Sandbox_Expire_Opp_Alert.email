@@ -1,9 +1,0 @@
-Hi {!Opportunity.OwnerFullName},<br><br>
-
-The below opportunity is about to expire in 7 days.<br><br>
-
-Opportunity Name : {!Opportunity.Name}<br>
-Opportunity Trial/Sandbox End Date : {!Opportunity.Trial_Sandbox_End_Date__c}<br>
-Link To Report of RFP demo and Trial or Sandbox org: {!Opportunity.RFP_and_Trial_Demo_Report__c} <br><br>
-
-Thanks

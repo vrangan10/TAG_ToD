@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Revenue_Scheduling_Enabled_is_True</fullName>
-    <active>true</active>
-    <description>For TAGCRM-976</description>
-    <errorConditionFormula>AND(CanUseRevenueSchedule = TRUE, OR(ISBLANK(TEXT( RevenueScheduleType )),ISBLANK(TEXT( Revenue_Type__c )),ISBLANK(TEXT(RevenueInstallmentPeriod)),ISBLANK( NumberOfRevenueInstallments )))</errorConditionFormula>
-    <errorMessage>For Revenue Scheduling to be True: Revenue Schedule Type, Revenue Type, Revenue Instalment Period, Number Of Revenue Instalments need to be filled.</errorMessage>
-</ValidationRule>

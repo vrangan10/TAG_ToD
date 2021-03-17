@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>OppClosedWonFillContractTerm</fullName>
-    <active>true</active>
-    <description>For Opp to be in Closed Won, Contract Term should be Filled</description>
-    <errorConditionFormula>AND(ISPICKVAL(StageName , &apos;Closed Won&apos;),ISBLANK( Contract_Term_Months__c ))</errorConditionFormula>
-    <errorMessage>Please Fill Contract Term(Months).</errorMessage>
-</ValidationRule>

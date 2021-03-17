@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Error_on_disqualified_leads</fullName>
-    <active>true</active>
-    <description>created for TAGCRM-760</description>
-    <errorConditionFormula>IsConverted &amp;&amp; (ISPICKVAL(Status,&apos;Disqualified&apos;) ||  ISPICKVAL(PRIORVALUE(Status),&apos;Disqualified&apos;) )</errorConditionFormula>
-    <errorMessage>You cannot convert Disqualified Leads.</errorMessage>
-</ValidationRule>
